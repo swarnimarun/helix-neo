@@ -697,7 +697,7 @@ impl Component for Explorer {
             match key_event {
                 key!(Esc) => self.unfocus(),
                 key!('q') => self.close(),
-                key!('?') => self.toggle_help(),
+                key!('?') | shift!('?') => self.toggle_help(),
                 key!('a') => self.new_create_file_or_folder_prompt(cx)?,
                 shift!('B') => self.change_root_parent_folder()?,
                 key!(']') => self.change_root_to_current_folder()?,
